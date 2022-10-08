@@ -6,6 +6,8 @@ const app = express();
 const router = express.Router();
 var cors = require('cors');
 const setRouts = require('./restAPI.js')
+const dotenv = require('dotenv');
+dotenv.config();
 
 app.use(cors());
 

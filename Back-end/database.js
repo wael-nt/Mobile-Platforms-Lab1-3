@@ -3,7 +3,10 @@ const BookModel = require('./BookModel');
 
 const Book = require("./BookModel");
 
-const uri = process.env.uri || "mongodb+srv://wael:nkEDYLp4pW8p15l9@mobile-platofrms-lab1.hjhckdh.mongodb.net/BookStore?retryWrites=true&w=majority";
+const dotenv = require('dotenv');
+dotenv.config();
+
+const uri = process.env.uri;
 
 mongoose.connect(uri, {
   useUnifiedTopology: true,
