@@ -1,20 +1,53 @@
-h1{
-    margin:  auto;
+h1 {
+    margin: auto;
     font-size: 80px;
     justify-content: center;
     display: flex;
 }
 
-.card{
-    margin:30px 30px 30px 200px;
-    display: inline-flex;
+.card {
+    margin: auto;
+    max-width: 1000px !important;
+    display: flex;
     background-color: rgb(96, 139, 139) !important;
     font-size: large;
     color: rgb(241, 255, 255);
-
-
+    margin-bottom: 40px;
+    justify-content: center;
 }
- .card-title{
+
+.card-title {
     font-size: xx-large;
     color: black;
- }
+    justify-content: center;
+    display: flex;
+}
+
+.card-footer {
+    font-size: xx-large;
+    color: black;
+    justify-content: center;
+    display: flex;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.btn {
+    color: rgb(20, 12, 70);
+    background-color: chocolate;
+    justify-content: center;
+    margin: auto;
+    display: flex;
+    width: 6rem !important;
+}
+
+.btn:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgb(117, 92, 9);
+}
+
+.fa-shopping-basket {
+    margin-left: 50px;
+    size: 60px !important;
+    font-size: 40px !important;
+}

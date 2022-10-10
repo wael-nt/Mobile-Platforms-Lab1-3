@@ -1,17 +1,16 @@
 const mongoose = require('mongoose');
-const BookModel = require('./BookModel');
-
 const Book = require("./BookModel");
 
 const dotenv = require('dotenv');
 dotenv.config();
 
-const uri = process.env.uri;
+const uri = process.env.MONGODB_URI;
 
 mongoose.connect(uri, {
   useUnifiedTopology: true,
-  useNewUrlParser: true
+  useNewUrlParser: true,
 });
+
 const connection = mongoose.connection;
 
 connection.once("open", function () {
@@ -50,7 +49,9 @@ async function getAllBooks() {
 async function getBookByName(bookName) {
   console.log(bookName)
   var books = {}
-  books = await Book.find({name:bookName}).then(function (book) {
+  books = await Book.find({
+    name: bookName
+  }).then(function (book) {
     return book;
   });
   console.log(books)
@@ -61,7 +62,9 @@ async function getBookByName(bookName) {
 async function getBookByAuthor(authorName) {
   console.log(authorName)
   var books = {}
-  books = await Book.find({author:authorName}).then(function (book) {
+  books = await Book.find({
+    author: authorName
+  }).then(function (book) {
     return book;
   });
   console.log(books)
@@ -72,7 +75,9 @@ async function getAllBooksWhithinCategory(category) {
   console.log("one book here")
   console.log(category)
   var books = {}
-  books = await Book.find({genre:category}).then(function (book) {
+  books = await Book.find({
+    genre: category
+  }).then(function (book) {
     return book;
   });
   console.log(books)
